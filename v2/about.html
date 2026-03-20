@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Marine Parts Locator v2</title>
+  <meta name="description" content="About the maritime parts locator concept and launch vision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="search.html">Search</a>
+        <a href="request.html">Request Sourcing</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html" class="active">About</a>
+        <a href="listings.html">Listings</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Positioning and trust</span>
+        <h1>A sourcing-first maritime parts platform.</h1>
+        <p>Marine Parts Locator is designed to start as an efficient sourcing desk and evolve into a true marketplace once buyer demand, supplier coverage, and automated sourcing are in place.</p>
+      </section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">Why this model works</span>
+          <h2>Fragmented market. High search friction. Clear value.</h2>
+        </div>
+        <div class="three-up">
+          <article class="info-card"><h3>Buyers</h3><p>Often know what broke, but not the exact part number, compatible alternatives, or best supplier source.</p></article>
+          <article class="info-card"><h3>Suppliers</h3><p>Often have inventory, but inconsistent listing formats and limited discoverability across the wider market.</p></article>
+          <article class="info-card"><h3>Platform</h3><p>Can win by turning messy demand and messy supply into structured, searchable, ranked options.</p></article>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">Automation direction</span>
+          <h2>The end state is AI-assisted sourcing, not manual brokerage.</h2>
+        </div>
+        <p>The public site collects structured requests, while the next layer uses OpenAI tool calling and retrieval workflows to normalize requests, search approved sources, compare results, and draft an answer for the user.</p>
+      </section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">Important note</span>
+          <h2>Fitment should still be verified.</h2>
+        </div>
+        <p>The platform should narrow the search, identify likely options, and surface compatible alternatives. Technical verification before purchase or installation still matters, especially across older vessels, retrofits, and salvage inventory.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Built to validate demand first, then automate sourcing and grow into a larger maritime network.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
