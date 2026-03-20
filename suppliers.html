@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suppliers | Marine Parts Locator</title>
+  <meta name="description" content="Supplier intake and early partner signup for the maritime parts network." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="search.html">Search</a>
+        <a href="request.html">Request Sourcing</a>
+        <a href="suppliers.html" class="active">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Supply-side growth</span>
+        <h1>Join the marine parts supplier network.</h1>
+        <p>Bring in salvage yards, parts dealers, brokers, and marine shops before paid placement goes live.</p>
+      </section>
+
+      <section class="form-layout">
+        <div class="panel">
+          <h2>Supplier intake form</h2>
+          <form class="form-stack" id="supplier-form">
+            <label>
+              <span>Company name</span>
+              <input type="text" placeholder="Company or supplier name" required />
+            </label>
+            <div class="two-up-inputs">
+              <label>
+                <span>Contact name</span>
+                <input type="text" placeholder="Primary contact" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" placeholder="name@example.com" required />
+              </label>
+            </div>
+            <div class="two-up-inputs">
+              <label>
+                <span>Country / region</span>
+                <input type="text" placeholder="e.g. USA / Florida" />
+              </label>
+              <label>
+                <span>Website</span>
+                <input type="url" placeholder="https://" />
+              </label>
+            </div>
+            <label>
+              <span>Categories sold</span>
+              <input type="text" placeholder="e.g. outboards, pumps, electrical, salvage" />
+            </label>
+            <label>
+              <span>Brands handled</span>
+              <input type="text" placeholder="e.g. Yamaha, Mercury, Volvo Penta" />
+            </label>
+            <label>
+              <span>Inventory type</span>
+              <select>
+                <option>New</option>
+                <option>Used</option>
+                <option>Salvage</option>
+                <option>Mixed</option>
+              </select>
+            </label>
+            <label>
+              <span>Notes</span>
+              <textarea rows="6" placeholder="Tell us about your inventory, response times, and preferred lead types."></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary btn-full">Submit Supplier Profile</button>
+          </form>
+        </div>
+
+        <aside class="panel sticky-panel">
+          <span class="eyebrow">Why join early</span>
+          <h2>Own the supply side before traffic scales.</h2>
+          <ul class="feature-list">
+            <li>Get considered for buyer requests</li>
+            <li>Position for future featured listings</li>
+            <li>Help shape the inventory categories</li>
+            <li>Build a verified supplier base from day one</li>
+          </ul>
+          <a href="pricing.html" class="btn btn-secondary btn-full">View Supplier Monetization Path</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Suppliers are the foundation for the later marketplace layer.</p>
+    </footer>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
