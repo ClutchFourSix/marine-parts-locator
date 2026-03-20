@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results | Marine Parts Locator v2</title>
+  <meta name="description" content="Structured sourcing results for a marine parts request." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="search.html">Search</a>
+        <a href="request.html">Request Sourcing</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="listings.html">Listings</a>
+        <a href="results.html" class="active">Results</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section id="result-summary" class="panel page-hero"></section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">Ranked sourcing options</span>
+          <h2>Best match first, alternatives clearly separated.</h2>
+        </div>
+        <div id="result-cards" class="results-stack"></div>
+      </section>
+
+      <section class="split-layout">
+        <div class="panel section-card">
+          <div class="section-heading">
+            <span class="eyebrow">Alternatives</span>
+            <h2>Fallback options</h2>
+          </div>
+          <div id="alternatives-list"></div>
+        </div>
+
+        <div class="panel section-card">
+          <div class="section-heading">
+            <span class="eyebrow">Disclaimer</span>
+            <h2>Verification still matters</h2>
+          </div>
+          <div id="result-disclaimer"></div>
+          <div class="utility-row">
+            <a class="btn btn-primary" href="request.html">Submit Another Request</a>
+            <a class="btn btn-secondary" href="search.html">Back to Search</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>This page reflects the future structured output of the AI sourcing backend.</p></footer>
+  </div>
+  <script src="assets/sample-result.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/results.js"></script>
+</body>
+</html>
