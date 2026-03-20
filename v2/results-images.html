@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results With Images | Marine Parts Locator v2</title>
+  <meta name="description" content="Structured sourcing results with item images." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .results-stack { display: grid; gap: 18px; }
+    .summary-top-row { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+    .summary-badge { padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--soft-button); font-weight: 700; }
+    .confidence-high { border-color: rgba(67,214,181,0.45); }
+    .confidence-medium { border-color: rgba(244,193,93,0.45); }
+    .confidence-low { border-color: rgba(220,120,120,0.45); }
+    .confidence-unknown { border-color: var(--line); }
+    .result-card-layout { display: grid; grid-template-columns: 240px minmax(0,1fr); gap: 20px; }
+    .result-image-wrap { width: 100%; }
+    .result-image { width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); display: block; }
+    .result-image-placeholder { height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 1px dashed var(--line); color: var(--muted); background: var(--soft-button); }
+    .result-card-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+    .best-match { border-color: rgba(67,214,181,0.32); }
+    .result-copy { min-width: 0; }
+    @media (max-width: 900px) {
+      .summary-top-row, .result-card-header { flex-direction: column; }
+      .result-card-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="search.html">Search</a>
+        <a href="request.html">Request Sourcing</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="listings.html">Listings</a>
+        <a href="results.html">Results</a>
+        <a href="results-images.html" class="active">Results + Images</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section id="result-summary" class="panel page-hero"></section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">Ranked sourcing options</span>
+          <h2>Results with image support.</h2>
+        </div>
+        <div id="result-cards" class="results-stack"></div>
+      </section>
+
+      <section class="split-layout">
+        <div class="panel section-card">
+          <div class="section-heading">
+            <span class="eyebrow">Alternatives</span>
+            <h2>Fallback options</h2>
+          </div>
+          <div id="alternatives-list"></div>
+        </div>
+
+        <div class="panel section-card">
+          <div class="section-heading">
+            <span class="eyebrow">Disclaimer</span>
+            <h2>Verification still matters</h2>
+          </div>
+          <div id="result-disclaimer"></div>
+          <div class="utility-row">
+            <a class="btn btn-primary" href="request.html">Submit Another Request</a>
+            <a class="btn btn-secondary" href="search.html">Back to Search</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>This page shows the image-ready version of the structured AI sourcing output.</p></footer>
+  </div>
+  <script src="assets/sample-result-with-images.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/results-with-images.js"></script>
+</body>
+</html>
