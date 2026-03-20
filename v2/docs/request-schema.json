@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clutchfoursix.github.io/marine-parts-locator/v2/docs/request-schema.json",
+  "title": "Marine Parts Locator Request Schema",
+  "type": "object",
+  "required": ["request_id", "submitted_at", "customer", "part_request"],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "Unique identifier for the sourcing request."
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the request was submitted."
+    },
+    "customer": {
+      "type": "object",
+      "required": ["email"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "part_request": {
+      "type": "object",
+      "required": ["part_name"],
+      "properties": {
+        "part_name": {
+          "type": "string"
+        },
+        "part_number": {
+          "type": "string"
+        },
+        "make": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        },
+        "condition_preference": {
+          "type": "string"
+        },
+        "budget": {
+          "type": "string"
+        },
+        "urgency": {
+          "type": "string",
+          "enum": ["Standard", "Priority", "Urgent / commercial"]
+        },
+        "shipping_destination": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "site_context": {
+      "type": "object",
+      "properties": {
+        "source_page": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string",
+          "enum": ["harbor-night", "chart-room"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
