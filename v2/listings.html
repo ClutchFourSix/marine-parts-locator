@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listings | Marine Parts Locator v2</title>
+  <meta name="description" content="Browse marine parts by category and inventory type." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="search.html">Search</a>
+        <a href="request.html">Request Sourcing</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="listings.html" class="active">Listings</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Category structure</span>
+        <h1>Browse listing categories.</h1>
+        <p>This page frames the marketplace structure and can later become a proper browsable inventory directory with supplier-backed category pages.</p>
+      </section>
+
+      <section class="three-up">
+        <article class="panel info-card"><h3>Outboard Parts</h3><p>Impellers, fuel components, lower-unit parts, trim systems, and controls.</p></article>
+        <article class="panel info-card"><h3>Inboard Components</h3><p>Cooling, fuel, exhaust, mounts, couplings, and drivetrain-related components.</p></article>
+        <article class="panel info-card"><h3>Electrical</h3><p>Switching, charging, panels, harnesses, batteries, and marine-grade protection gear.</p></article>
+        <article class="panel info-card"><h3>Pumps</h3><p>Raw water pumps, bilge pumps, washdown systems, and plumbing support parts.</p></article>
+        <article class="panel info-card"><h3>Steering</h3><p>Hydraulic components, actuators, helms, hoses, and steering assemblies.</p></article>
+        <article class="panel info-card"><h3>Navigation</h3><p>MFD accessories, cabling, sensors, mounts, and electronics-related components.</p></article>
+      </section>
+
+      <section class="panel section pricing-teaser">
+        <div>
+          <span class="eyebrow">Need something specific?</span>
+          <h2>Escalate from browsing to sourcing.</h2>
+          <p>If category browsing is not enough, move directly into a sourcing request and let the automation layer work the search.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="request.html">Request Sourcing</a>
+          <a class="btn btn-secondary" href="search.html">Search Inventory</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Listings categories are structured to support future supplier onboarding, indexing, and SEO pages.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
