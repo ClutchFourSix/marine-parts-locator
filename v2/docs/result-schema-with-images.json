@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clutchfoursix.github.io/marine-parts-locator/v2/docs/result-schema-with-images.json",
+  "title": "Marine Parts Locator Result Schema With Images",
+  "type": "object",
+  "required": ["request_id", "status", "summary", "results", "disclaimer"],
+  "properties": {
+    "request_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "processing", "completed", "failed"]
+    },
+    "summary": {
+      "type": "object",
+      "required": ["canonical_part_name", "fit_confidence_overall"],
+      "properties": {
+        "canonical_part_name": {
+          "type": "string"
+        },
+        "canonical_part_number": {
+          "type": "string"
+        },
+        "fit_confidence_overall": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "unknown"]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rank", "title", "supplier", "fit_confidence", "reason"],
+        "properties": {
+          "rank": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "part_number": {
+            "type": "string"
+          },
+          "supplier": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "fit_confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low", "unknown"]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "image_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "alternatives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
