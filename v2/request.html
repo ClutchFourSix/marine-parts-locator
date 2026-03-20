@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Sourcing | Marine Parts Locator v2</title>
+  <meta name="description" content="Submit a marine parts sourcing request." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="search.html">Search</a>
+        <a href="request.html" class="active">Request Sourcing</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Core monetization page</span>
+        <h1>Request expert marine parts sourcing.</h1>
+        <p>Tell us what you need, how urgent it is, and where it needs to go. This version gives you a usable structured intake flow on GitHub Pages.</p>
+      </section>
+
+      <section class="form-layout">
+        <div class="panel section-card">
+          <h2>Request details</h2>
+          <form class="form-stack" id="request-form" data-form-type="request">
+            <label><span>Part name</span><input type="text" name="partName" placeholder="e.g. raw water pump" required /></label>
+            <label><span>Part number</span><input type="text" name="partNumber" placeholder="Optional but helpful" /></label>
+            <div class="two-up-inputs">
+              <label><span>Vessel or engine make</span><input type="text" name="make" placeholder="e.g. Yanmar" /></label>
+              <label><span>Model</span><input type="text" name="model" placeholder="e.g. 6LP" /></label>
+            </div>
+            <div class="two-up-inputs">
+              <label><span>Year</span><input type="text" name="year" placeholder="e.g. 2004" /></label>
+              <label><span>Shipping destination</span><input type="text" name="destination" placeholder="e.g. Florida, USA" /></label>
+            </div>
+            <div class="two-up-inputs">
+              <label><span>Preferred condition</span>
+                <select name="condition"><option>Any</option><option>New</option><option>Used</option><option>Refurbished</option></select>
+              </label>
+              <label><span>Urgency</span>
+                <select name="urgency"><option>Standard</option><option>Priority</option><option>Urgent / commercial</option></select>
+              </label>
+            </div>
+            <label><span>Budget</span><input type="text" name="budget" placeholder="Optional budget range" /></label>
+            <label><span>Notes</span><textarea name="notes" rows="6" placeholder="Describe the part, fitment concerns, or any known details."></textarea></label>
+            <div class="two-up-inputs">
+              <label><span>Email</span><input type="email" name="email" placeholder="name@example.com" required /></label>
+              <label><span>Phone (optional)</span><input type="text" name="phone" placeholder="Optional" /></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Build Intake Summary</button>
+          </form>
+          <div id="request-success" class="success-card hidden"></div>
+        </div>
+
+        <aside class="panel sticky-panel">
+          <span class="eyebrow">Suggested pricing</span>
+          <h2>Start simple</h2>
+          <div class="pricing-stack">
+            <article class="price-card"><strong>$29</strong><span>Standard sourcing request</span></article>
+            <article class="price-card featured"><strong>$79</strong><span>Priority sourcing request</span></article>
+            <article class="price-card"><strong>$149+</strong><span>Rare or urgent commercial search</span></article>
+          </div>
+          <p class="muted">On GitHub Pages, submissions can be captured in the browser, copied cleanly, and sent through your email workflow until a backend is added.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>This page is designed to become the primary revenue gateway for the MVP.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
