@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clutchfoursix.github.io/marine-parts-locator/v2/docs/tool-schema.json",
+  "title": "Marine Parts Locator Tool Schema",
+  "type": "object",
+  "required": ["tools"],
+  "properties": {
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "parameters"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "parameters": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "tools": [
+        {
+          "name": "normalize_part_request",
+          "description": "Normalize a buyer marine part request into canonical search terms and structured fields.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "part_name": { "type": "string" },
+              "part_number": { "type": "string" },
+              "make": { "type": "string" },
+              "model": { "type": "string" },
+              "year": { "type": "string" },
+              "notes": { "type": "string" }
+            },
+            "required": ["part_name"]
+          }
+        },
+        {
+          "name": "search_public_sources",
+          "description": "Search approved public maritime parts sources and return candidate listings.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "queries": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "category": { "type": "string" },
+              "condition_preference": { "type": "string" },
+              "destination_region": { "type": "string" }
+            },
+            "required": ["queries"]
+          }
+        },
+        {
+          "name": "extract_listing_details",
+          "description": "Extract structured fields from a candidate supplier or listing page.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "url": { "type": "string", "format": "uri" }
+            },
+            "required": ["url"]
+          }
+        },
+        {
+          "name": "find_compatible_alternatives",
+          "description": "Identify likely substitute part numbers, rebuild kits, or related options.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "canonical_part_number": { "type": "string" },
+              "manufacturer": { "type": "string" },
+              "make": { "type": "string" },
+              "model": { "type": "string" }
+            }
+          }
+        },
+        {
+          "name": "rank_results",
+          "description": "Score candidate results by relevance, fit confidence, condition, budget, and shipping suitability.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "normalized_request": { "type": "object" },
+              "candidates": {
+                "type": "array",
+                "items": { "type": "object" }
+              }
+            },
+            "required": ["normalized_request", "candidates"]
+          }
+        },
+        {
+          "name": "store_request_result",
+          "description": "Persist the final structured output for later retrieval.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "request_id": { "type": "string" },
+              "result_payload": { "type": "object" }
+            },
+            "required": ["request_id", "result_payload"]
+          }
+        }
+      ]
+    }
+  ]
+}
