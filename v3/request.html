@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Request | Marine Parts Locator</title>
+  <meta name="description" content="Post a wanted parts request when search does not return a strong match." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../v2/assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="request.html" class="active">Post a Request</a>
+        <a href="wanted.html">Wanted Parts</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Wanted parts intake</span>
+        <h1>Post a marine parts request.</h1>
+        <p>Use this when the indexed inventory does not show a strong match. Your request can inform supplier onboarding and future inventory discovery.</p>
+      </section>
+
+      <section class="form-layout">
+        <div class="panel section-card">
+          <h2>Request details</h2>
+          <form class="form-stack" id="request-form" data-form-type="request">
+            <label><span>Part name</span><input type="text" name="partName" placeholder="e.g. raw water pump" required /></label>
+            <label><span>Part number</span><input type="text" name="partNumber" placeholder="Optional but helpful" /></label>
+            <div class="two-up-inputs">
+              <label><span>Make</span><input type="text" name="make" placeholder="e.g. Yanmar" /></label>
+              <label><span>Model</span><input type="text" name="model" placeholder="e.g. 6LP" /></label>
+            </div>
+            <div class="two-up-inputs">
+              <label><span>Year</span><input type="text" name="year" placeholder="e.g. 2004" /></label>
+              <label><span>Shipping destination</span><input type="text" name="destination" placeholder="e.g. Florida, USA" /></label>
+            </div>
+            <div class="two-up-inputs">
+              <label><span>Preferred condition</span><select name="condition"><option>Any</option><option>New</option><option>Used</option><option>Refurbished</option></select></label>
+              <label><span>Urgency</span><select name="urgency"><option>Standard</option><option>Priority</option><option>Urgent / commercial</option></select></label>
+            </div>
+            <label><span>Budget</span><input type="text" name="budget" placeholder="Optional budget range" /></label>
+            <label><span>Notes</span><textarea name="notes" rows="6" placeholder="Describe the part, known fitment details, or alternatives already tried."></textarea></label>
+            <div class="two-up-inputs">
+              <label><span>Email</span><input type="email" name="email" placeholder="name@example.com" required /></label>
+              <label><span>Phone (optional)</span><input type="text" name="phone" placeholder="Optional" /></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Build Request Summary</button>
+          </form>
+          <div id="request-success" class="success-card hidden"></div>
+        </div>
+
+        <aside class="panel sticky-panel">
+          <span class="eyebrow">How this helps</span>
+          <h2>Wanted parts drive the marketplace.</h2>
+          <ul class="feature-list">
+            <li>Shows demand trends for suppliers</li>
+            <li>Guides source discovery and indexing priorities</li>
+            <li>Helps determine which categories deserve more crawl coverage</li>
+          </ul>
+          <a class="btn btn-secondary btn-full" href="wanted.html">Browse Wanted Parts</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Post a request when inventory is missing or uncertain.</p></footer>
+  </div>
+  <script src="../v2/assets/app.js"></script>
+</body>
+</html>
