@@ -1,0 +1,13 @@
+{
+  "name": "marine-parts-locator-crawler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Crawlee-based ingestion layer for Marine Parts Locator no-AI MVP",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "crawlee": "^3.15.0"
+  }
+}
