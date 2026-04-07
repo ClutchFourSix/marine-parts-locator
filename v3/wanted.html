@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanted Parts | Marine Parts Locator</title>
+  <meta name="description" content="Wanted marine parts board for current buyer demand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../v2/assets/styles.css" />
+  <style>
+    .wanted-board { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .wanted-entry { padding: 24px; }
+    .wanted-entry h3 { margin: 8px 0 12px; }
+    .wanted-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    @media (max-width: 900px) { .wanted-board { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="../v2/search.html">Search</a>
+        <a href="../v2/request.html">Request Sourcing</a>
+        <a href="wanted.html" class="active">Wanted Parts</a>
+        <a href="../v2/suppliers.html">Suppliers</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Demand board</span>
+        <h1>Wanted marine parts</h1>
+        <p>A dedicated page for parts requests keeps the homepage clean while still showing real buyer demand and guiding supplier onboarding.</p>
+      </section>
+
+      <section class="wanted-board">
+        <article class="panel wanted-entry info-card">
+          <span class="eyebrow">Wanted</span>
+          <h3>Yanmar 6LP raw water pump</h3>
+          <p>Buyer seeks direct replacement or strong compatible option. Shipping preference: southeastern US.</p>
+          <div class="wanted-meta">
+            <span class="meta-pill">Category: Pumps</span>
+            <span class="meta-pill">Region: Florida</span>
+            <span class="meta-pill">Priority</span>
+          </div>
+        </article>
+
+        <article class="panel wanted-entry info-card">
+          <span class="eyebrow">Wanted</span>
+          <h3>Volvo Penta trim relay</h3>
+          <p>Seeking verified electrical replacement with part number confirmation and product image if available.</p>
+          <div class="wanted-meta">
+            <span class="meta-pill">Category: Electrical</span>
+            <span class="meta-pill">Region: Texas</span>
+            <span class="meta-pill">Standard</span>
+          </div>
+        </article>
+
+        <article class="panel wanted-entry info-card">
+          <span class="eyebrow">Wanted</span>
+          <h3>Mercury steering actuator</h3>
+          <p>Looking for used or refurbished option with shipping to Georgia and clear condition notes.</p>
+          <div class="wanted-meta">
+            <span class="meta-pill">Category: Steering</span>
+            <span class="meta-pill">Region: Georgia</span>
+            <span class="meta-pill">Priority</span>
+          </div>
+        </article>
+
+        <article class="panel wanted-entry info-card">
+          <span class="eyebrow">Wanted</span>
+          <h3>Garmin marine network cable kit</h3>
+          <p>Buyer needs compatible networking accessory with fast shipping and clear fitment details.</p>
+          <div class="wanted-meta">
+            <span class="meta-pill">Category: Navigation</span>
+            <span class="meta-pill">Region: Carolinas</span>
+            <span class="meta-pill">Standard</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Wanted parts board for community demand and supplier visibility.</p></footer>
+  </div>
+  <script src="../v2/assets/app.js"></script>
+</body>
+</html>
