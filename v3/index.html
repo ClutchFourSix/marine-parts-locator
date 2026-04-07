@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marine Parts Locator | Search Marine Parts Fast</title>
+  <meta name="description" content="Search-first marine parts locator with wanted parts and supplier discovery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../v2/assets/styles.css" />
+  <style>
+    .minimal-hero { padding: 56px 42px; text-align: left; }
+    .minimal-hero h1 { margin: 12px 0 14px; font-size: clamp(2.4rem, 5vw, 5rem); line-height: 0.96; letter-spacing: -0.06em; }
+    .minimal-hero p { max-width: 760px; }
+    .search-shell { margin-top: 26px; display: grid; gap: 14px; }
+    .search-bar-wrap { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; }
+    .search-bar-wrap input { min-height: 64px; font-size: 1.04rem; }
+    .search-bar-wrap .btn { min-height: 64px; padding-inline: 24px; }
+    .hero-chips, .mini-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-chips { margin-top: 14px; }
+    .mini-grid { margin-top: 10px; }
+    .request-strip { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; }
+    .wanted-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .wanted-card { padding: 22px; }
+    .wanted-card h3 { margin: 8px 0 10px; }
+    .muted-link { color: var(--accent); font-weight: 700; }
+    @media (max-width: 980px) {
+      .request-strip, .wanted-grid, .search-bar-wrap { grid-template-columns: 1fr; display: grid; }
+      .search-bar-wrap .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="../v2/search.html">Search</a>
+        <a href="../v2/request.html">Request Sourcing</a>
+        <a href="wanted.html">Wanted Parts</a>
+        <a href="../v2/suppliers.html">Suppliers</a>
+        <a href="../v2/pricing.html">Pricing</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="panel minimal-hero">
+        <span class="eyebrow">Search-first marine parts locator</span>
+        <h1>Find the part. Fast.</h1>
+        <p>Search by part number, brand, engine, model, or category. If nothing turns up, post a request and let the supply side catch up.</p>
+        <div class="search-shell">
+          <form class="search-bar-wrap" action="../v2/search.html" method="get">
+            <input type="text" name="q" placeholder="Search by part number, brand, engine, model, or keyword" />
+            <button type="submit" class="btn btn-primary">Search Parts</button>
+          </form>
+          <div class="cta-row">
+            <a class="btn btn-secondary" href="../v2/request.html">Post a Request</a>
+            <a class="btn btn-secondary" href="wanted.html">Browse Wanted Parts</a>
+          </div>
+        </div>
+        <div class="hero-chips">
+          <span class="meta-pill">Outboards</span>
+          <span class="meta-pill">Inboards</span>
+          <span class="meta-pill">Pumps</span>
+          <span class="meta-pill">Electrical</span>
+          <span class="meta-pill">Steering</span>
+          <span class="meta-pill">Navigation</span>
+        </div>
+      </section>
+
+      <section class="request-strip">
+        <div class="panel section-card">
+          <div class="section-heading">
+            <span class="eyebrow">Recent wanted parts</span>
+            <h2>Live demand without cluttering the homepage.</h2>
+          </div>
+          <p>A small feed of recent wanted parts gives the site proof of activity while keeping the landing page clean and search-led.</p>
+          <div class="mini-grid">
+            <span class="meta-pill">Yanmar 6LP raw water pump</span>
+            <span class="meta-pill">Volvo Penta trim relay</span>
+            <span class="meta-pill">Mercury steering actuator</span>
+            <span class="meta-pill">Garmin network cable kit</span>
+          </div>
+          <div class="cta-row">
+            <a class="muted-link" href="wanted.html">View full wanted parts board</a>
+          </div>
+        </div>
+
+        <div class="panel section-card">
+          <div class="section-heading">
+            <span class="eyebrow">For suppliers</span>
+            <h2>See what buyers actually need.</h2>
+          </div>
+          <p>Wanted-part demand helps guide supplier onboarding, listing priorities, and source discovery without turning the front page into a forum.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="../v2/suppliers.html">Supplier Intake</a>
+            <a class="btn btn-secondary" href="../v2/listings.html">Browse Categories</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">Recent wanted parts</span>
+          <h2>Community demand snapshots</h2>
+        </div>
+        <div class="wanted-grid">
+          <article class="panel wanted-card info-card">
+            <span class="eyebrow">Wanted</span>
+            <h3>Yanmar 6LP raw water pump</h3>
+            <p>Buyer seeking direct replacement or strong compatible alternative, preferably southeastern US shipping.</p>
+          </article>
+          <article class="panel wanted-card info-card">
+            <span class="eyebrow">Wanted</span>
+            <h3>Volvo Penta trim relay</h3>
+            <p>Seeking working electrical replacement with part number confirmation and image if available.</p>
+          </article>
+          <article class="panel wanted-card info-card">
+            <span class="eyebrow">Wanted</span>
+            <h3>Mercury steering actuator</h3>
+            <p>Looking for used or refurbished option with shipping to Georgia and clear condition notes.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>v3 homepage direction: minimalist search first, wanted-parts secondary, supplier discovery supported.</p></footer>
+  </div>
+  <script src="../v2/assets/app.js"></script>
+</body>
+</html>
