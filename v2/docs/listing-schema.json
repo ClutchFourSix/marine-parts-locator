@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clutchfoursix.github.io/marine-parts-locator/v2/docs/listing-schema.json",
+  "title": "Marine Parts Locator Listing Schema",
+  "type": "object",
+  "required": ["listing_id", "source_name", "source_url", "title", "category", "last_seen_at"],
+  "properties": {
+    "listing_id": { "type": "string" },
+    "source_name": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" },
+    "title": { "type": "string" },
+    "part_number": { "type": "string" },
+    "brand": { "type": "string" },
+    "make": { "type": "string" },
+    "model": { "type": "string" },
+    "category": { "type": "string" },
+    "condition": { "type": "string" },
+    "price": { "type": "string" },
+    "currency": { "type": "string" },
+    "location": { "type": "string" },
+    "supplier": { "type": "string" },
+    "image_url": { "type": "string", "format": "uri" },
+    "description": { "type": "string" },
+    "status": { "type": "string", "enum": ["active", "stale", "removed"] },
+    "last_seen_at": { "type": "string", "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
