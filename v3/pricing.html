@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Marine Parts Locator</title>
+  <meta name="description" content="Launch pricing for buyers and suppliers on Marine Parts Locator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../v2/assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <a class="brand" href="index.html">Marine Parts Locator</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="request.html">Post a Request</a>
+        <a href="wanted.html">Wanted Parts</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <span class="theme-toggle__label">Theme</span>
+        <strong id="theme-toggle-name">Harbor Night</strong>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Launch pricing</span>
+        <h1>Simple pricing that matches the MVP.</h1>
+        <p>The free front end builds traffic and demand. Paid services can later unlock premium visibility, supplier access, and deeper request handling.</p>
+      </section>
+
+      <section class="pricing-grid">
+        <article class="panel price-panel">
+          <span class="price-tag">Free</span>
+          <h2>Search & Browse</h2>
+          <p>Search indexed listings, browse wanted parts, and learn what suppliers are active.</p>
+          <ul class="feature-list">
+            <li>Search the indexed inventory</li>
+            <li>Browse wanted parts board</li>
+            <li>Explore listing categories</li>
+          </ul>
+          <a class="btn btn-secondary btn-full" href="search.html">Search Now</a>
+        </article>
+
+        <article class="panel price-panel featured-panel">
+          <span class="price-tag">Early access</span>
+          <h2>Supplier Visibility</h2>
+          <p>The supplier side is designed to grow into a visibility and lead-generation channel as traffic builds.</p>
+          <ul class="feature-list">
+            <li>Supplier intake and profile building</li>
+            <li>Future demand exposure from wanted parts</li>
+            <li>Potential featured placement later</li>
+          </ul>
+          <a class="btn btn-primary btn-full" href="suppliers.html">Join as Supplier</a>
+        </article>
+
+        <article class="panel price-panel">
+          <span class="price-tag">Future</span>
+          <h2>Premium Access</h2>
+          <p>Reserved for later, once the indexed inventory, supplier network, and wanted-parts board mature.</p>
+          <ul class="feature-list">
+            <li>Featured supplier placement</li>
+            <li>Advanced filters or alerts</li>
+            <li>Request board visibility options</li>
+          </ul>
+          <a class="btn btn-secondary btn-full" href="about.html">See Roadmap</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Pricing is intentionally simple while the scraper-first inventory grows.</p></footer>
+  </div>
+  <script src="../v2/assets/app.js"></script>
+</body>
+</html>
