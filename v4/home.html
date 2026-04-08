@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marine Parts Locator v4</title>
+  <meta name="description" content="Hamburger-menu mobile header version of Marine Parts Locator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <div class="header-row">
+        <a class="brand" href="home.html">Marine Parts Locator</a>
+        <div class="header-controls">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__label">Theme</span>
+            <strong id="theme-toggle-name">Harbor Night</strong>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div id="nav-drawer" class="nav-drawer">
+        <nav class="nav">
+          <a href="home.html" class="active">Home</a>
+          <a href="search.html">Search</a>
+          <a href="request.html">Request</a>
+          <a href="suppliers.html">Suppliers</a>
+          <a href="pricing.html">Pricing</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero panel">
+        <div class="hero-copy">
+          <span class="eyebrow">Mobile header fix</span>
+          <h1>Marine Parts Locator v4</h1>
+          <p>This version uses a three-line menu button on mobile so the header stays compact until the user chooses to open the menu.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="search.html">Find a Part</a>
+            <a class="btn btn-secondary" href="request.html">Request Sourcing</a>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="stat-card"><h3>Compact by default</h3><p>The nav stays hidden on phones until the menu icon is tapped.</p></article>
+          <article class="stat-card"><h3>Theme still accessible</h3><p>The theme control remains available without taking a full extra row.</p></article>
+          <article class="stat-card"><h3>Cleaner first view</h3><p>The actual content starts much higher on the screen.</p></article>
+          <article class="stat-card accent-card"><span>Direction</span><strong>Hamburger mobile nav</strong></article>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">What changed</span>
+          <h2>The menu now opens only when tapped.</h2>
+        </div>
+        <div class="three-up">
+          <article class="info-card"><h3>One compact row</h3><p>Brand on the left. Theme and menu controls on the right.</p></article>
+          <article class="info-card"><h3>Drop-down drawer</h3><p>The navigation appears only after tapping the three-line icon.</p></article>
+          <article class="info-card"><h3>Better mobile focus</h3><p>The user sees content first instead of a tall navigation block.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Marine Parts Locator v4 — hamburger-menu mobile header preview.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
