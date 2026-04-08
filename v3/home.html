@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marine Parts Locator v3</title>
+  <meta name="description" content="Compact mobile-header version of Marine Parts Locator." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <div class="header-top">
+        <a class="brand" href="home.html">Marine Parts Locator</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="theme-toggle__label">Theme</span>
+          <strong id="theme-toggle-name">Harbor Night</strong>
+        </button>
+      </div>
+      <nav class="nav">
+        <a href="home.html" class="active">Home</a>
+        <a href="search.html">Search</a>
+        <a href="request.html">Request</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero panel">
+        <div class="hero-copy">
+          <span class="eyebrow">Compact mobile header</span>
+          <h1>Marine Parts Locator v3</h1>
+          <p>This version tightens the mobile header so the navigation no longer eats half the screen.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="search.html">Find a Part</a>
+            <a class="btn btn-secondary" href="request.html">Request Sourcing</a>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="stat-card"><h3>Brand + theme</h3><p>Now share a compact top row on mobile.</p></article>
+          <article class="stat-card"><h3>Nav chips</h3><p>The main nav becomes a horizontal scroll row instead of a tall stack.</p></article>
+          <article class="stat-card"><h3>Less wasted space</h3><p>The header stays accessible without pushing content off the screen.</p></article>
+          <article class="stat-card accent-card"><span>Goal</span><strong>Better mobile usability</strong></article>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">What changed</span>
+          <h2>A more compact header for phones.</h2>
+        </div>
+        <div class="three-up">
+          <article class="info-card"><h3>One top row</h3><p>Brand on the left, theme on the right.</p></article>
+          <article class="info-card"><h3>Horizontal nav</h3><p>Core links stay available without taking multiple rows.</p></article>
+          <article class="info-card"><h3>Same visual style</h3><p>The maritime dark/light themes remain intact.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Marine Parts Locator v3 — compact mobile header preview.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
