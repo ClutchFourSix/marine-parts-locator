@@ -1,0 +1,50 @@
+const sampleListings = [
+  {
+    id: 'mpl-001',
+    title: 'Yanmar Raw Water Pump Assembly',
+    partNumber: '129670-42500',
+    brand: 'Yanmar',
+    category: 'Pumps',
+    condition: 'Used',
+    location: 'Florida, USA',
+    price: '$425',
+    freshnessLabel: 'Seen today',
+    freshnessClass: 'freshness-fresh',
+    confidence: 'Exact part-number match',
+    imageUrl: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=900&q=80',
+    description: 'Pulled from a running auxiliary diesel setup. Good candidate for rebuild or direct replacement depending on fitment verification.',
+    supplier: 'Atlantic Marine Salvage'
+  },
+  {
+    id: 'mpl-002',
+    title: 'Garmin Marine Network Cable Kit',
+    partNumber: '010-10550-00',
+    brand: 'Garmin',
+    category: 'Navigation',
+    condition: 'New',
+    location: 'Texas, USA',
+    price: '$79',
+    freshnessLabel: 'Seen 2 days ago',
+    freshnessClass: 'freshness-aging',
+    confidence: 'Direct catalog match',
+    imageUrl: 'https://images.unsplash.com/photo-1581092919535-7146ff1a590c?auto=format&fit=crop&w=900&q=80',
+    description: 'New old stock networking kit for compatible Garmin marine electronics installations.',
+    supplier: 'Gulf Coast Electronics Supply'
+  },
+  {
+    id: 'mpl-003',
+    title: 'Mercury Steering Actuator Assembly',
+    partNumber: '8M0055487',
+    brand: 'Mercury',
+    category: 'Steering',
+    condition: 'Refurbished',
+    location: 'Georgia, USA',
+    price: '$610',
+    freshnessLabel: 'Seen 6 days ago',
+    freshnessClass: 'freshness-stale',
+    confidence: 'Likely compatibility match',
+    imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
+    description: 'Refurbished steering actuator assembly with bench test documentation available on request.',
+    supplier: 'Southeast Marine Components'
+  }
+];
