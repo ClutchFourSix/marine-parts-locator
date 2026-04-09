@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Marine Parts Locator v4</title>
+  <meta name="description" content="Pricing page with a compact mobile menu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <div class="header-row">
+        <a class="brand" href="home.html">Marine Parts Locator</a>
+        <div class="header-controls">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__label">Theme</span>
+            <strong id="theme-toggle-name">Harbor Night</strong>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div id="nav-drawer" class="nav-drawer">
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="request.html">Request</a>
+          <a href="suppliers.html">Suppliers</a>
+          <a href="pricing.html" class="active">Pricing</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Simple launch tiers</span>
+        <h1>Start free. Monetize later.</h1>
+        <p>The MVP can stay free for discovery, while future paid tiers can unlock alerts, premium supplier placement, or priority access.</p>
+      </section>
+
+      <section class="three-up">
+        <article class="panel price-panel">
+          <span class="price-tag">Free</span>
+          <h2>Browse</h2>
+          <p>Search the current inventory and explore suppliers without friction.</p>
+          <ul class="feature-list">
+            <li>Search stored listings</li>
+            <li>View part details</li>
+            <li>Submit a missing-part request</li>
+          </ul>
+        </article>
+
+        <article class="panel price-panel featured-panel">
+          <span class="price-tag">Future</span>
+          <h2>Buyer Alerts</h2>
+          <p>Get notified when matching inventory appears for saved searches and hard-to-find parts.</p>
+          <ul class="feature-list">
+            <li>Saved search watchlists</li>
+            <li>Availability notifications</li>
+            <li>Priority visibility into new matches</li>
+          </ul>
+        </article>
+
+        <article class="panel price-panel">
+          <span class="price-tag">Future</span>
+          <h2>Supplier Pro</h2>
+          <p>Featured placement and better visibility once demand and coverage justify monetization.</p>
+          <ul class="feature-list">
+            <li>Featured supplier presence</li>
+            <li>Category visibility boosts</li>
+            <li>Early access to demand trends</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>v4 pricing page now shares the same compact mobile navigation.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
