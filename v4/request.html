@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request | Marine Parts Locator v4</title>
+  <meta name="description" content="Submit a part request with a compact mobile menu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <div class="header-row">
+        <a class="brand" href="home.html">Marine Parts Locator</a>
+        <div class="header-controls">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__label">Theme</span>
+            <strong id="theme-toggle-name">Harbor Night</strong>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div id="nav-drawer" class="nav-drawer">
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="request.html" class="active">Request</a>
+          <a href="suppliers.html">Suppliers</a>
+          <a href="pricing.html">Pricing</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Request capture</span>
+        <h1>Can’t find your part? Submit a request.</h1>
+        <p>Tell us what part you need. This helps us improve search coverage and spot demand gaps while the scraper network grows.</p>
+      </section>
+
+      <section class="form-layout">
+        <div class="panel section-card">
+          <h2>Part request</h2>
+          <form class="form-stack" id="request-form">
+            <label><span>Part name</span><input type="text" name="partName" placeholder="e.g. raw water pump" required /></label>
+            <label><span>Part number</span><input type="text" name="partNumber" placeholder="Optional but helpful" /></label>
+            <div class="two-up-inputs">
+              <label><span>Make</span><input type="text" name="make" placeholder="e.g. Yanmar" /></label>
+              <label><span>Model</span><input type="text" name="model" placeholder="e.g. 6LP" /></label>
+            </div>
+            <div class="two-up-inputs">
+              <label><span>Year</span><input type="text" name="year" placeholder="e.g. 2004" /></label>
+              <label><span>Destination</span><input type="text" name="destination" placeholder="e.g. Florida, USA" /></label>
+            </div>
+            <div class="two-up-inputs">
+              <label><span>Preferred condition</span><select name="condition"><option>Any</option><option>New</option><option>Used</option><option>Refurbished</option></select></label>
+              <label><span>Urgency</span><select name="urgency"><option>Standard</option><option>Priority</option><option>Urgent / commercial</option></select></label>
+            </div>
+            <label><span>Budget</span><input type="text" name="budget" placeholder="Optional budget range" /></label>
+            <label><span>Notes</span><textarea name="notes" rows="6" placeholder="Describe the part or fitment concern."></textarea></label>
+            <div class="two-up-inputs">
+              <label><span>Email</span><input type="email" name="email" placeholder="name@example.com" required /></label>
+              <label><span>Phone (optional)</span><input type="text" name="phone" placeholder="Optional" /></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Build Request Summary</button>
+          </form>
+          <div id="request-success" class="success-card hidden"></div>
+        </div>
+
+        <aside class="panel section-card">
+          <span class="eyebrow">How this helps</span>
+          <h2>Request capture feeds future coverage.</h2>
+          <ul class="feature-list">
+            <li>Highlights missing inventory categories</li>
+            <li>Shows what parts people struggle to find</li>
+            <li>Supports future supplier onboarding and alerts</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>v4 request page now shares the same compact mobile navigation.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
