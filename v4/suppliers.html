@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suppliers | Marine Parts Locator v4</title>
+  <meta name="description" content="Supplier intake with a compact mobile menu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <div class="header-row">
+        <a class="brand" href="home.html">Marine Parts Locator</a>
+        <div class="header-controls">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__label">Theme</span>
+            <strong id="theme-toggle-name">Harbor Night</strong>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div id="nav-drawer" class="nav-drawer">
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="request.html">Request</a>
+          <a href="suppliers.html" class="active">Suppliers</a>
+          <a href="pricing.html">Pricing</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Supply-side growth</span>
+        <h1>Join as a marine parts supplier.</h1>
+        <p>Bring in inventory sources, salvage yards, and marine shops so the marketplace can expand coverage quickly.</p>
+      </section>
+
+      <section class="form-layout">
+        <div class="panel section-card">
+          <h2>Supplier intake</h2>
+          <form class="form-stack" id="supplier-form">
+            <label><span>Company name</span><input type="text" name="companyName" placeholder="Company or supplier name" required /></label>
+            <div class="two-up-inputs">
+              <label><span>Contact name</span><input type="text" name="contactName" placeholder="Primary contact" /></label>
+              <label><span>Email</span><input type="email" name="email" placeholder="name@example.com" required /></label>
+            </div>
+            <div class="two-up-inputs">
+              <label><span>Region</span><input type="text" name="region" placeholder="e.g. USA / Florida" /></label>
+              <label><span>Website</span><input type="url" name="website" placeholder="https://" /></label>
+            </div>
+            <label><span>Categories sold</span><input type="text" name="categories" placeholder="e.g. pumps, outboards, salvage" /></label>
+            <label><span>Brands handled</span><input type="text" name="brands" placeholder="e.g. Yamaha, Mercury, Volvo Penta" /></label>
+            <label><span>Inventory type</span><select name="inventoryType"><option>New</option><option>Used</option><option>Salvage</option><option>Mixed</option></select></label>
+            <label><span>Notes</span><textarea name="notes" rows="6" placeholder="Tell us about your inventory and response times."></textarea></label>
+            <button type="submit" class="btn btn-primary btn-full">Build Supplier Summary</button>
+          </form>
+          <div id="supplier-success" class="success-card hidden"></div>
+        </div>
+
+        <aside class="panel section-card">
+          <span class="eyebrow">Why join</span>
+          <h2>Get in before demand scales.</h2>
+          <ul class="feature-list">
+            <li>Be considered for future buyer demand</li>
+            <li>Help define inventory categories early</li>
+            <li>Prepare for later featured placement</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>v4 suppliers page now shares the same compact mobile navigation.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
