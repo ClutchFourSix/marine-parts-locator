@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marine Parts Locator v5</title>
+  <meta name="description" content="Search-first marine parts discovery MVP." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <div class="header-row">
+        <a class="brand" href="home.html">Marine Parts Locator</a>
+        <div class="header-controls">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__label">Theme</span>
+            <strong id="theme-toggle-name">Harbor Night</strong>
+          </button>
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+        </div>
+      </div>
+      <div id="nav-drawer" class="nav-drawer">
+        <nav class="nav">
+          <a href="home.html" class="active">Home</a>
+          <a href="search.html">Search</a>
+          <a href="request.html">Part Request</a>
+          <a href="suppliers.html">Suppliers</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="listings.html">Listings</a>
+          <a href="results.html">Results</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero panel">
+        <div class="hero-copy">
+          <span class="eyebrow">Scraper-first marine parts discovery</span>
+          <h1>Find marine parts in one place.</h1>
+          <p>Search stored listings, compare suppliers, and submit missing-part requests that help expand future coverage. This MVP is built to be search-first, mobile-friendly, and financially safe to run.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="search.html">Search Inventory</a>
+            <a class="btn btn-secondary" href="request.html">Can’t find your part?</a>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="stat-card"><h3>Search-first</h3><p>The core product is inventory search and supplier comparison, not a brochure page.</p></article>
+          <article class="stat-card"><h3>No-AI MVP</h3><p>The public path is designed around stored listings and deterministic search, not costly per-request AI.</p></article>
+          <article class="stat-card"><h3>Supplier growth</h3><p>Supplier intake and missing-part capture help grow coverage in the right categories.</p></article>
+          <article class="stat-card accent-card"><span>MVP goal</span><strong>Presentable to real users</strong></article>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <div class="section-heading">
+          <span class="eyebrow">How it works</span>
+          <h2>Search, compare, request.</h2>
+        </div>
+        <div class="three-up">
+          <article class="info-card"><h3>1. Search inventory</h3><p>Look for part numbers, categories, and suppliers from one search surface.</p></article>
+          <article class="info-card"><h3>2. Review match quality</h3><p>Check freshness, supplier, condition, and location before clicking through.</p></article>
+          <article class="info-card"><h3>3. Fill the gaps</h3><p>If a part is missing, submit a request so we know what coverage to build next.</p></article>
+        </div>
+      </section>
+
+      <section class="grid-2">
+        <article class="panel section-card">
+          <span class="eyebrow">For buyers</span>
+          <h2>Search hard-to-find inventory faster.</h2>
+          <p>Use filters, compare freshness, and move quickly to the most relevant supplier options.</p>
+          <div class="utility-row">
+            <a class="btn btn-primary" href="search.html">Browse Search</a>
+            <a class="btn btn-secondary" href="results.html">See Results Example</a>
+          </div>
+        </article>
+        <article class="panel section-card">
+          <span class="eyebrow">For suppliers</span>
+          <h2>Get into the network early.</h2>
+          <p>Supplier intake is built in so future search coverage can expand around real inventory and real demand.</p>
+          <div class="utility-row">
+            <a class="btn btn-primary" href="suppliers.html">Supplier Intake</a>
+            <a class="btn btn-secondary" href="about.html">Learn More</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Marine Parts Locator v5 — front-end MVP complete preview.</p></footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
