@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="harbor-night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search | Marine Parts Locator v5</title>
+  <meta name="description" content="Search stored marine parts listings with images and freshness labels." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header panel">
+      <div class="header-row">
+        <a class="brand" href="home.html">Marine Parts Locator</a>
+        <div class="header-controls">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme"><span class="theme-toggle__label">Theme</span><strong id="theme-toggle-name">Harbor Night</strong></button>
+          <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button>
+        </div>
+      </div>
+      <div id="nav-drawer" class="nav-drawer">
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="search.html" class="active">Search</a>
+          <a href="request.html">Part Request</a>
+          <a href="suppliers.html">Suppliers</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="listings.html">Listings</a>
+          <a href="results.html">Results</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="panel page-hero">
+        <span class="eyebrow">Search-first MVP</span>
+        <h1>Search stored marine parts listings.</h1>
+        <p>Use part numbers, brands, categories, condition, and location to narrow the best available matches.</p>
+      </section>
+
+      <section class="search-layout">
+        <aside class="panel filter-panel">
+          <h2>Filters</h2>
+          <form id="search-form" class="form-stack">
+            <label><span>Keyword or part number</span><input type="text" id="search-query" placeholder="e.g. 129670-42500" /></label>
+            <label><span>Category</span>
+              <select id="search-category">
+                <option value="">All categories</option>
+                <option value="Outboard Parts">Outboard Parts</option>
+                <option value="Inboard Components">Inboard Components</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Pumps">Pumps</option>
+                <option value="Steering">Steering</option>
+                <option value="Navigation">Navigation</option>
+              </select>
+            </label>
+            <label><span>Condition</span>
+              <select id="search-condition">
+                <option value="">Any condition</option>
+                <option value="New">New</option>
+                <option value="Used">Used</option>
+                <option value="Refurbished">Refurbished</option>
+              </select>
+            </label>
+            <label><span>Location</span><input type="text" id="search-location" placeholder="e.g. Florida, USA" /></label>
+            <button type="submit" class="btn btn-primary btn-full">Apply Filters</button>
+          </form>
+        </aside>
+
+        <section class="results-area">
+          <div class="results-toolbar panel">
+            <div>
+              <span class="eyebrow">Stored inventory</span>
+              <h2 id="results-count">3 listings found</h2>
+            </div>
+            <div class="utility-row">
+              <a class="btn btn-secondary" href="listings.html">Browse Categories</a>
+              <a class="btn btn-primary" href="request.html">Can’t find your part?</a>
+            </div>
+          </div>
+          <div id="results-grid" class="listing-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Images, freshness labels, and supplier context make this closer to the real MVP experience.</p></footer>
+  </div>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/search.js"></script>
+</body>
+</html>
